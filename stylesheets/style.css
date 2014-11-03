@@ -45,6 +45,9 @@ p{
 	height:100%;
 
 }
+.vision h3{
+	color: #3d4b52;
+}
 
 @media only screen and (max-width: 479px) {
 .vision{
@@ -72,7 +75,7 @@ p{
 }
 
 span{
-	color: red;
+	color: #3d4b52;
 }
 
 .exp{
@@ -88,4 +91,21 @@ span{
 
 .contact{
 	margin-top: 80px;
+}
+.contact h4 {
+	color: #3d4b52;
+}
+
+.form{
+	background-color: white;
+}
+.footer{
+	 background-color:#3d4b52;
+  height: 130px;
+  margin-bottom: 100px;
+  margin-top: 60px;
+  
+}
+.span{
+	color: #3d4b52;
 }
