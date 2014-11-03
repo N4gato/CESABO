@@ -7,7 +7,7 @@
 	<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
+	<title>CESABO</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- Mobile Specific Metas
@@ -15,10 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- CSS
 	================================================== -->
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" href="stylesheets/timeline.css">
 	<link rel="stylesheet" href="stylesheets/skeleton/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton/skeleton.css">
@@ -41,10 +38,10 @@
 	<!-- Primary Page Layout
 	================================================== -->
 	<!-- Delete everything in this .container and get started on your own site! -->
-	<div class="container">
+	<div class="container" id="main">
 		<header class="">
 			<div class="sixteen columns">
-				<a class="logo" href="#"> <b> CESABO 2014 </b></a>
+				<a data-scroll class="logo" href="#main"> <b> CESABO 2014 </b></a>
 				<div class="mobile-toggle">
 					<span></span>
 					<span></span>
@@ -52,9 +49,9 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#VISION">VISION</a></li>
-						<li><a href="#EXPERIENCE">EXPERIENCE</a></li>
-						<li><a href="#CONTACT">CONTACT</a></li>
+						<li><a data-scroll href="#VISION">VISION</a></li>
+						<li><a data-scroll href="#EXPERIENCE">EXPERIENCE</a></li>
+						<li><a data-scroll href="#CONTACT">CONTACT</a></li>
 					</ul>
 					<ul id="lang">
 						
@@ -78,7 +75,7 @@
 				<img src="images/image1.png" class="image1" alt="">
 			</div>
 			<div class="ten columns omega vision">
-				<div class="six columns" >
+				<div class="six columns" id="VISION">
 					<br><br><br>
 					<h3> <span>Vision</span>  </h3><br>
 					<p>
@@ -103,7 +100,7 @@
 		</div>
 		
 		<div class="sixteen columns clearfix offset-by-one">
-			<div class="six columns alpha">
+			<div class="six columns alpha" id="EXPERIENCE">
 				
 				<br><br><br>
 				<h3> <span> Experience </span></h3>
@@ -122,8 +119,8 @@
 			</div>
 			
 		</div>
-		<br><br><br><br><br><br><br><br><br>
-		<div class="sixteen columns clearfix">
+		
+		<div class="sixteen columns exp">
 			<div class="six columns alpha">
 				<img src="images/don.jpg" class="image2" alt="">
 			</div>
@@ -150,15 +147,47 @@
 					<br>
 					Conseiller spécial du CEO de General Cable Corporate <br>
 					Membre du conseil d'administation de Cedrat
+					<br><br><br><br><br><br>
 					</h5>
 					
 				</div>
 			</div>
 		</div>
 		
-		<div class="sixteen columns clearfix">
+		<div class="sixteen columns clearfix info">
 			
 		</div>
+
+		<div class="sixteen columns clearfix contact offset-by-two">
+			<div class="six columns alpha">
+				<h4>Contact</h4><br>
+				<h6>Paris,Franc</h6>
+				<h6>info@cesaboconsulting.com</h6>
+				<h6>(+33) 12334556778</h6>
+			</div>
+			
+			<div class="six columns alpha offset-by-one">
+				<form action="">
+					<input type="text" value="Name*"><br>
+					<input type="text" value="Email*"><br>
+					<textarea rows="4" cols="50">
+					Inscrivez votre message...
+					</textarea>
+					<input type="submit" value="Envoyer"><br>
+				</form>
+			</div>
+		</div>
 	</div>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script>
+			smoothScroll.init({
+				speed: 1000,
+				easing: 'easeInOutCubic',
+				offset: 0,
+				updateURL: true,
+				callbackBefore: function ( toggle, anchor ) {},
+				callbackAfter: function ( toggle, anchor ) {}
+			});
+	</script>
 </body>
 </html>

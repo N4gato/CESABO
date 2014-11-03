@@ -72,5 +72,20 @@ p{
 }
 
 span{
-	color:black;
+	color: red;
+}
+
+.exp{
+	margin-top: 110px;
+}
+
+.info{
+	 background-color:#657b85;
+  height: 500px;
+  
+
+}
+
+.contact{
+	margin-top: 80px;
 }
