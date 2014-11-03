@@ -92,20 +92,54 @@ span{
 .contact{
 	margin-top: 80px;
 }
-.contact h4 {
-	color: #3d4b52;
-}
+
 
 .form{
 	background-color: white;
+	padding: 15px;
 }
 .footer{
 	 background-color:#3d4b52;
   height: 130px;
   margin-bottom: 100px;
   margin-top: 60px;
-  
+  color: white;
+  padding-left: 150px;
+  padding-top: 50px;
 }
+
+
 .span{
 	color: #3d4b52;
+}
+
+input[type="text"] {
+    width: 100%;
+    border-width:2px;
+    border-color: #cbcbcb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    
+    
+}
+
+#email{
+	margin-top: -10px;
+}
+
+textarea { border: none; }
+
+input[type="submit"] {
+  
+    border-color: #3d4b52;
+    border-radius: 5px;
+    color: #3d4b52;
+    background-color: #f6f6f6;
+    width: 105px;
+    height: 35px;
+    float: right;
+	border-width: 2px;
+
 }
