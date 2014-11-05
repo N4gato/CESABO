@@ -1,0 +1,995 @@
+/* ========================================== */
+/* USER
+/* ========================================== */
+/* ========================================== */
+/* Normalisation of content
+/* ========================================== */
+body {
+  margin: 0;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+html {
+  font-smooth: always;
+  background-color: white;
+}
+section {
+  padding: 0 0 20% 0;
+}
+aside {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 20%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 766px) {
+  aside {
+    height: 150px;
+  }
+}
+aside .background {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background-color: #D3D3D3;
+  resize: none;
+}
+@media only screen and (max-width: 766px) {
+  aside .background {
+    transform: translateY(0px);
+  }
+}
+aside .container {
+  height: 100px;
+  top: 130px;
+}
+@media only screen and (max-width: 766px) {
+  aside .container {
+    top: 30px;
+  }
+}
+aside .container div:first-child {
+  background-color: red;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background: url('../images/quoteBG.png');
+}
+aside .container p {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: white;
+  margin: 0;
+  border-left: white 2px solid;
+  padding-left: 20px;
+}
+aside .container p:first-child {
+  font-size: 1.3em;
+}
+aside .container p:nth-child(2) {
+  font-size: 0.8em;
+  color: #DADADA;
+}
+header {
+  position: fixed;
+  z-index: 99999;
+  top: 0px;
+  max-height: 60px;
+  width: 100%;
+  line-height: 60px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.close {
+  top: -60px;
+}
+.open-nav {
+  max-height: 600px !important;
+}
+.open-nav .mobile-toggle {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5em;
+  float: left;
+  display: inline;
+  color: #616063;
+}
+@media only screen and (max-width: 766px) {
+  .logo {
+    float: none;
+  }
+}
+nav {
+  float: right;
+  line-height: 60px;
+}
+@media only screen and (max-width: 766px) {
+  nav {
+    width: 100%;
+  }
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+@media only screen and (max-width: 766px) {
+  nav ul {
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+}
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-left: 35px;
+}
+nav ul li:last-child {
+  margin-right: 25px;
+}
+@media only screen and (max-width: 766px) {
+  nav ul li {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+nav ul a {
+  color: #616063;
+  text-decoration: none;
+  font-size: 0.8em;
+  width: 100%;
+}
+nav ul a::after {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #C21B12;
+  content: '';
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  transition: width 0.3s;
+}
+nav ul a:hover::after,
+nav ul a a:focus::after {
+  width: 100%;
+}
+nav ul#lang {
+  display: inline;
+}
+@media only screen and (max-width: 766px) {
+  nav ul#lang {
+    display: inline;
+  }
+}
+nav ul#lang li {
+  display: inline;
+  margin-left: 10px;
+}
+nav ul#lang li:last-child {
+  margin-right: 10px;
+}
+nav ul#lang a {
+  color: red;
+}
+nav ul#lang a::after {
+  top: 120%;
+}
+@media only screen and (max-width: 766px) {
+  nav ul#lang a {
+    padding: 20px;
+  }
+}
+nav ul#lang .active a:after {
+  width: 100%;
+}
+.mobile-toggle {
+  float: right;
+  display: none;
+  top: 15px;
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+@media only screen and (max-width: 766px) {
+  .mobile-toggle {
+    display: inline-block;
+  }
+}
+.mobile-toggle span {
+  width: 30px;
+  height: 5px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+  background: #8f8f8f;
+  display: block;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+/* ========================================== */
+/* Landing
+/* ========================================== */
+#landing {
+  position: relative;
+  padding: 30% 0 0 0;
+  margin-bottom: 20%;
+  width: 100%;
+  height: 100%;
+  background-color: #1C213D;
+  overflow: hidden;
+}
+#landing .background {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  transform: translateY(-700px);
+}
+@media only screen and (max-width: 766px) {
+  #landing .background {
+    display: none;
+  }
+}
+#landing #contScroll {
+  position: relative;
+  padding: 26% 0 100px 0;
+}
+#landing #scroll {
+  position: relative;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  background: url('../images/scroll.png');
+  margin: auto;
+}
+#landing #scroll:hover {
+  background-position: bottom center;
+}
+/* ========================================== */
+/* Contact
+/* ========================================== */
+/* ===================== */
+/* CONTACT FORM
+/* ===================== */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] select {
+  color: #FFF;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 8px 6px;
+  outline: none;
+  color: #777;
+  display: block;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error,
+textarea.error,
+button.error,
+input[type="submit"].error,
+input[type="reset"].error,
+input[type="button"] select.error {
+  border-color: red;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"] select:focus {
+  border: 1px solid #eee;
+  color: #444;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+input[type="text"]:focus.error,
+input[type="password"]:focus.error,
+input[type="email"]:focus.error,
+textarea:focus.error,
+button:focus.error,
+input[type="submit"]:focus.error,
+input[type="reset"]:focus.error,
+input[type="button"] select:focus.error {
+  border-color: red;
+}
+textarea {
+  height: 200px;
+}
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  color: #FFF;
+  background-color: #435084;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: #FFF;
+  background-color: #7ABA9F;
+}
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  color: #FFF;
+  background-color: #7F8C8D;
+}
+/* ========================================== */
+/* Textual Content
+/* ========================================== */
+/* ***************** */
+/* Default
+/* ***************** */
+/* ------- HEADER -------*/
+h1,
+h2,
+h3,
+h4 {
+  display: inline-block;
+  color: #2d2d2d;
+}
+h1 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 3em;
+  color: #ffffff;
+  border-bottom: #C21B12 1px solid;
+  margin-left: -6px;
+  padding: 0px 3px 20px 3px;
+}
+h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 2em;
+  margin: 10px 0px 30px 0;
+}
+h3 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  border-bottom: red 1px solid;
+  margin-left: -6px;
+  padding: 0px 3px 20px 3px;
+}
+/* ------- Paragraphe -------*/
+p {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #8d8d8d;
+}
+/* ***************** */
+/* Specific
+/* ***************** */
+.txt-h13-landing {
+  color: white;
+  margin: 15px;
+}
+.txt-footer {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 0;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #323232;
+}
+/* ========================================== */
+/* List
+/* ========================================== */
+/* ***************** */
+/* Default
+/* ***************** */
+ul {
+  padding: 3% 0 3% 0;
+  list-style-type: none;
+}
+ul li {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 1em;
+  color: #2d2d2d;
+  text-transform: uppercase;
+}
+/* ***************** */
+/* Specific
+/* ***************** */
+/* ------- Project List -------*/
+.project {
+  margin-top: 8%;
+  padding: 0;
+  background: url('../images/projetBG.jpg');
+}
+.pjct-core {
+  padding: 5% 5% 5% 5%;
+  background: red;
+  background: url('../images/projectlink.png');
+}
+.pjct-core:hover {
+  background: blue;
+  background: url('../images/projectlink_hover.png');
+}
+.pjct-core h2,
+.pjct-core p {
+  color: white;
+  margin: 0;
+}
+.pjct-core h2 {
+  font-size: 2.5em;
+  color: white;
+}
+.pjct-core p {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #E0E0E0;
+}
+/* ========================================== */
+/* Link
+/* ========================================== */
+/* ***************** */
+/* Default
+/* ***************** */
+a {
+  text-decoration: none;
+}
+/* ***************** */
+/* Specific
+/* ***************** */
+/* ========================================== */
+/* Website Specific
+/* ========================================== */
+/* ***************** */
+/* Services
+/* ***************** */
+.frame {
+  position: relative;
+  display: none;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  margin-top: 100px;
+}
+.frame img {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  z-index: 10;
+  box-shadow: 20px 20px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.frame .land {
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame .land .top {
+  background: url('../images/land01.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.frame .land .middle {
+  background: url('../images/land02.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.frame .land .bottom {
+  background: url('../images/land03.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 766px) {
+  .frame {
+    display: none;
+  }
+}
+/* ***************** */
+/* Footer
+/* ***************** */
+footer {
+  border-top: #4F4F4F 10px solid;
+}
+/* ===================== */
+/* Skeleton grid
+/* ===================== */
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+/* #Site Styles
+================================================== */
+/* #Page Styles
+================================================== */
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+/*	@font-face {
+	    font-family: 'Open Sans', 'sans-serif';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+/* #Base 960 Grid
+================================================== */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.container .column,
+.container .columns {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.row {
+  margin-bottom: 20px;
+}
+/* Nested Column Classes */
+.column.alpha,
+.columns.alpha {
+  margin-left: 0;
+}
+.column.omega,
+.columns.omega {
+  margin-right: 0;
+}
+/* Base Grid */
+.container .one.column,
+.container .one.columns {
+  width: 40px;
+}
+.container .two.columns {
+  width: 100px;
+}
+.container .three.columns {
+  width: 160px;
+}
+.container .four.columns {
+  width: 220px;
+}
+.container .five.columns {
+  width: 280px;
+}
+.container .six.columns {
+  width: 340px;
+}
+.container .seven.columns {
+  width: 400px;
+}
+.container .eight.columns {
+  width: 460px;
+}
+.container .nine.columns {
+  width: 520px;
+}
+.container .ten.columns {
+  width: 580px;
+}
+.container .eleven.columns {
+  width: 640px;
+}
+.container .twelve.columns {
+  width: 700px;
+}
+.container .thirteen.columns {
+  width: 760px;
+}
+.container .fourteen.columns {
+  width: 820px;
+}
+.container .fifteen.columns {
+  width: 880px;
+}
+.container .sixteen.columns {
+  width: 940px;
+}
+.container .one-third.column {
+  width: 300px;
+}
+.container .two-thirds.column {
+  width: 620px;
+}
+/* Offsets */
+.container .offset-by-one {
+  padding-left: 60px;
+}
+.container .offset-by-two {
+  padding-left: 120px;
+}
+.container .offset-by-three {
+  padding-left: 180px;
+}
+.container .offset-by-four {
+  padding-left: 240px;
+}
+.container .offset-by-five {
+  padding-left: 300px;
+}
+.container .offset-by-six {
+  padding-left: 360px;
+}
+.container .offset-by-seven {
+  padding-left: 420px;
+}
+.container .offset-by-eight {
+  padding-left: 480px;
+}
+.container .offset-by-nine {
+  padding-left: 540px;
+}
+.container .offset-by-ten {
+  padding-left: 600px;
+}
+.container .offset-by-eleven {
+  padding-left: 660px;
+}
+.container .offset-by-twelve {
+  padding-left: 720px;
+}
+.container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.container .offset-by-fifteen {
+  padding-left: 900px;
+}
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+  .container .column,
+  .container .columns {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .column.alpha,
+  .columns.alpha {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .column.omega,
+  .columns.omega {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  .alpha.omega {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container .one.column,
+  .container .one.columns {
+    width: 28px;
+  }
+  .container .two.columns {
+    width: 76px;
+  }
+  .container .three.columns {
+    width: 124px;
+  }
+  .container .four.columns {
+    width: 172px;
+  }
+  .container .five.columns {
+    width: 220px;
+  }
+  .container .six.columns {
+    width: 268px;
+  }
+  .container .seven.columns {
+    width: 316px;
+  }
+  .container .eight.columns {
+    width: 364px;
+  }
+  .container .nine.columns {
+    width: 412px;
+  }
+  .container .ten.columns {
+    width: 460px;
+  }
+  .container .eleven.columns {
+    width: 508px;
+  }
+  .container .twelve.columns {
+    width: 556px;
+  }
+  .container .thirteen.columns {
+    width: 604px;
+  }
+  .container .fourteen.columns {
+    width: 652px;
+  }
+  .container .fifteen.columns {
+    width: 700px;
+  }
+  .container .sixteen.columns {
+    width: 748px;
+  }
+  .container .one-third.column {
+    width: 236px;
+  }
+  .container .two-thirds.column {
+    width: 492px;
+  }
+  /* Offsets */
+  .container .offset-by-one {
+    padding-left: 48px;
+  }
+  .container .offset-by-two {
+    padding-left: 96px;
+  }
+  .container .offset-by-three {
+    padding-left: 144px;
+  }
+  .container .offset-by-four {
+    padding-left: 192px;
+  }
+  .container .offset-by-five {
+    padding-left: 240px;
+  }
+  .container .offset-by-six {
+    padding-left: 288px;
+  }
+  .container .offset-by-seven {
+    padding-left: 336px;
+  }
+  .container .offset-by-eight {
+    padding-left: 384px;
+  }
+  .container .offset-by-nine {
+    padding-left: 432px;
+  }
+  .container .offset-by-ten {
+    padding-left: 480px;
+  }
+  .container .offset-by-eleven {
+    padding-left: 528px;
+  }
+  .container .offset-by-twelve {
+    padding-left: 576px;
+  }
+  .container .offset-by-thirteen {
+    padding-left: 624px;
+  }
+  .container .offset-by-fourteen {
+    padding-left: 672px;
+  }
+  .container .offset-by-fifteen {
+    padding-left: 720px;
+  }
+}
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+  .container .columns,
+  .container .column {
+    margin: 0;
+  }
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 300px;
+  }
+  /* Offsets */
+  .container .offset-by-one,
+  .container .offset-by-two,
+  .container .offset-by-three,
+  .container .offset-by-four,
+  .container .offset-by-five,
+  .container .offset-by-six,
+  .container .offset-by-seven,
+  .container .offset-by-eight,
+  .container .offset-by-nine,
+  .container .offset-by-ten,
+  .container .offset-by-eleven,
+  .container .offset-by-twelve,
+  .container .offset-by-thirteen,
+  .container .offset-by-fourteen,
+  .container .offset-by-fifteen {
+    padding-left: 0;
+  }
+}
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 420px;
+  }
+  /* .container .columns,
+        .container .column { margin: 0; }*/
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 420px;
+  }
+}
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+.row,
+.clearfix {
+  zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

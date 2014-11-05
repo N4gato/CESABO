@@ -24,7 +24,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link rel="stylesheet/less" type="text/css" href="stylesheets/menu/_menu.less" />
-	<script src="stylesheets/menu/less.js" type="text/javascript"></script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -41,7 +40,7 @@
 	<!-- Delete everything in this .container and get started on your own site! -->
 	<div class="container" id="main">
 		<header class="">
-			<div class="sixteen columns">
+			<div class="sixteen columns scr">
 				<a data-scroll class="logo" href="#main"> <b> CESABO 2014 </b></a>
 				<div class="mobile-toggle">
 					<span></span>
@@ -89,7 +88,7 @@
 					<hr>
 					<h2>
 					
-					If you can dreamit,you can do it
+					If you can dream it,you can do it
 					</h2>
 					<hr>
 					<br>
@@ -174,7 +173,6 @@
 						<input type="text" id="email" value="Email*">
 						<textarea rows="6" cols="100">Inscrivez votre message...
 						</textarea>
-
 					</div>
 					<br>
 					<input type="submit" value="ENVOYER">
@@ -196,5 +194,64 @@
 				callbackAfter: function ( toggle, anchor ) {}
 			});
 	</script>
+
+	<script src="stylesheets/menu/less.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <script src="js/skrollr.min.js"></script>
+ 
+    <script>
+
+  		var previousScroll = 0, pos = 0;
+
+  		$(window).on('scroll',function(){
+  			var currentScroll = $(this).scrollTop();
+  			if(currentScroll > previousScroll && currentScroll > 0){
+  				$('header').addClass('close');
+  			} else {
+  				$('header').removeClass('close');
+  			}
+  			previousScroll = currentScroll;
+  		});
+
+
+        
+      $('.mobile-toggle').click(function() {
+          if ($('header').hasClass('open-nav')) {
+              $('header').removeClass('open-nav');
+          } else {
+              $('header').addClass('open-nav');
+          }
+      });
+
+      $('header li a').click(function() {
+          if ($('header').hasClass('open-nav')) {
+              $('.navigation').removeClass('open-nav');
+              $('header').removeClass('open-nav');
+          }
+      });
+
+      $('nav a').on('click touchend', function(event) {  
+          var id = $(this).attr("href");
+          var offset = 70;
+          var target = $(id).offset().top - offset;
+          $('html, body').animate({
+              scrollTop: target
+          }, 1500);
+          event.preventDefault();
+      });
+      
+      var size = $(window).width();
+     
+      if(size > 768 && ( !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera))){
+          $('.frame').show();
+
+          skrollr.init({
+            forceHeight: false
+          });
+          window.scrollReveal = new scrollReveal();
+      }
+      
+  </script>
 </body>
 </html>
