@@ -1,7 +1,7 @@
 body {
   background-color: #f6f6f6;
   color: #657b85;
-padding-left: 150px;
+
 
 }
 
@@ -32,11 +32,16 @@ padding-left: 150px;
 	width: 357px;
 	height: 700px;
 }
-
+.image2{
+  width: 357px;
+  height: 550px;
+}
 p{
 	
 }
-
+.top{
+  margin-left: -80px
+}
 .vision{
 	padding-left: 120px;
 	background-color: white;
@@ -84,10 +89,21 @@ span{
 
 .info{
 	 background-color:#657b85;
-  height: 500px;
+  height: 1200px;
+  padding-top: 40px;
   
 
 }
+
+.info h4{
+  text-align: center;
+  width: 500px;
+  color: #37474f;
+  padding: 10px;
+  border:medium solid #37474f;
+  border-radius: 8px;
+}
+
 
 .contact{
 	margin-top: 80px;
