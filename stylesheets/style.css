@@ -48,6 +48,14 @@ body {
     } 
   }
 
+    @media only screen and (max-width: 479px) {
+       .image1{
+       height: 500px;
+       width: 300px;
+
+    } 
+  }
+
 .image2{  
   width: 370px;
   height: 545px;
@@ -60,10 +68,18 @@ body {
     }
   }
 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
+   @media only screen and (min-width: 480px) and (max-width: 767px) {
    .image2{
        height: 740px;
        width: 420px;
+
+    } 
+  }
+
+  @media only screen and (max-width: 479px) {
+       .image2{
+       height: 500px;
+       width: 300px;
 
     } 
   }
@@ -158,6 +174,13 @@ span{
   
 
 }
+}
+  @media only screen and (max-width: 479px) {
+    .info{
+   background-color:#657b85;
+  height: 1400px;
+  padding-top: 40px;
+  }
 
 .cd-timeline-img img {
   display: block;
