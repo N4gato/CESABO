@@ -32,10 +32,42 @@ body {
 	width: 370px;
 	height: 700px;
 }
-.image2{
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .image1{
+       height: 740px;
   width: 370px;
-  height: 550px;
+
+    }
+  }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+   .image1{
+       height: 740px;
+       width: 420px;
+
+    } 
+  }
+
+.image2{  
+  width: 370px;
+  height: 545px;
 }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .image2{
+       height: 632px;
+  width: 370px;
+
+    }
+  }
+
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+   .image2{
+       height: 740px;
+       width: 420px;
+
+    } 
+  }
+
 p{
 	
 }
@@ -89,11 +121,57 @@ span{
 
 .info{
 	 background-color:#657b85;
-  height: 1200px;
+  height: 1202px;
   padding-top: 40px;
   
 
 }
+
+
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+.info{
+   background-color:#657b85;
+  height: 900px;
+  padding-top: 40px;
+  
+
+}
+
+.cd-timeline-img img {
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+}
+
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+.info{
+   background-color:#657b85;
+  height: 1050px;
+  padding-top: 40px;
+  
+
+}
+
+.cd-timeline-img img {
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+  }
+
 
 .info h4{
   text-align: center;
