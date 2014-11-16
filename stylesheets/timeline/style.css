@@ -257,6 +257,7 @@ header h1 {
 }
 .cd-timeline-content h2 {
   color: #303e49;
+  margin-top: -13px;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
@@ -295,9 +296,20 @@ header h1 {
   border-right: 7px solid white;
 }
 @media only screen and (min-width: 768px) {
+
+
+
+.cd-timeline-img img {
+ 
+  width: 0px;
+  height: 0px;
+  
+}
+
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
+     margin-top: -13px;
   }
   .cd-timeline-content p {
     font-size: 20px;
@@ -309,13 +321,23 @@ header h1 {
   }
 }
 @media only screen and (min-width: 1170px) {
+  
+  .cd-timeline-img img {
+ 
+  width: 24px;
+  height: 24px;
+  
+}
+
+
+
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
   }
   .cd-timeline-content::before {
-    top: 24px;
+    top: 8px;
     left: 100%;
     border-color: transparent;
     border-left-color: white;
@@ -335,7 +357,7 @@ header h1 {
     float: right;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-    top: 24px;
+    top: 8px;
     left: auto;
     right: 100%;
     border-color: transparent;
@@ -481,4 +503,27 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .cd-timeline-img img {
+ 
+  width: 0px;
+  height: 0px;
+
+}
+  .cd-timeline-content h2 {
+
+margin-top: -3px;
+ 
+}
+
+}
+
+@media only screen and (max-width: 479px) {
+    .cd-timeline-content h2 {
+
+margin-top: -3px;
+ 
+}
 }
