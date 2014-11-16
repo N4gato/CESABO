@@ -295,6 +295,7 @@ header h1 {
   border: 7px solid ;
   border-right: 7px solid white;
 }
+
 @media only screen and (min-width: 768px) {
 
 
@@ -309,7 +310,7 @@ header h1 {
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
-     margin-top: -13px;
+     margin-top: 3px;
   }
   .cd-timeline-content p {
     font-size: 20px;
@@ -329,6 +330,11 @@ header h1 {
   
 }
 
+.cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+     margin-top: -13px;
+  }
 
 
   .cd-timeline-content {
