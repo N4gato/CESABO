@@ -60,8 +60,8 @@ body {
   }
 
 .image2{  
-  width: 370px;
   height: 546px;
+  width: 370px;
 }
   @media only screen and (min-width: 768px) and (max-width: 959px) {
     .image2{
