@@ -31,6 +31,7 @@ body {
   margin-top: 20px;
 }
 
+
 .image1{
   width: 370px;
   height: 700px;
@@ -38,7 +39,7 @@ body {
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
   @media only screen and (min-width: 768px) and (max-width: 959px) {
     .image1{
-       height: 760px;
+       height: 740px;
   width: 370px;
 
     }
@@ -59,13 +60,62 @@ body {
     } 
   }
 
+  .vision{
+  padding-left: 120px;
+  background-color: white;
+
+  width: 100%;
+  height: 700px;
+
+}
+.vision h2{
+  font-size: 30px;
+}
+.vision h3{
+  color: #3d4b52;
+}
+
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .vision{
+       height: 740px;
+  width: 100%;
+
+    }
+  }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .vision{
+  padding-left: 0px;
+  background-color: white;
+
+  width: 100%;
+       height: 100%;
+  
+
+}
+}
+@media only screen and (max-width: 479px) {
+.vision{
+  padding-left: 0px;
+  background-color: white;
+
+  width: 100%;
+       height: 100%;
+  
+
+}
+
+}
+
+
+
 .image2{  
   height: 546px;
   width: 370px;
 }
   @media only screen and (min-width: 768px) and (max-width: 959px) {
     .image2{
-       height: 602px;
+       height: 632px;
   width: 370px;
 
     }
@@ -87,51 +137,59 @@ body {
     } 
   }
 
+
+
+  .emmanuel{
+  padding-left: 120px;
+  background-color: white;
+
+  width: 100%;
+  height: 546px;
+  
+
+}
+.emmanuel h2{
+  font-size: 30px;
+}
+.emmanuel h3{
+  color: #3d4b52;
+}
+
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .emmanuel{
+  height: 632px;
+  width: 100%;
+
+    }
+  }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .emmanuel{
+  padding-left: 0px;
+  height: 100%;
+  
+
+}
+}
+@media only screen and (max-width: 479px) {
+.emmanuel{
+  padding-left: 0px;
+  height: 100%;
+  
+
+}
+
+}
+
+
+
 p{
   
 }
 .top{
   margin-left: -80px
 }
-.vision{
-  padding-left: 120px;
-  background-color: white;
 
-  width: 100%;
-  height:100%;
-
-}
-.vision h2{
-  font-size: 30px;
-}
-.vision h3{
-  color: #3d4b52;
-}
-
-@media only screen and (max-width: 479px) {
-.vision{
-  padding-left: 0px;
-  background-color: white;
-
-  width: 100%;
-  height:100%;
-
-}
-
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .vision{
-  padding-left: 0px;
-  background-color: white;
-
-  width: 100%;
-  height:100%;
-
-}
-
-}
-}
 
 span{
   color: #3d4b52;
@@ -143,7 +201,7 @@ span{
 
 .info{
    background-color:#657b85;
-  height: 1202px;
+  height: 100%;
   padding-top: 40px;
   
 
@@ -152,11 +210,6 @@ span{
 
 
 
-@media only screen and (max-width: 1170px) {
-  .info{
-   height: 825px;
- }
-}
 
 }
 .cd-timeline-img img {
@@ -170,12 +223,11 @@ span{
   margin-top: -12px;
 }
 
-}
+
 
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 .info{
-   background-color:#657b85;
-  height: 100px;
+  
   padding-top: 40px;
   
 
@@ -183,8 +235,6 @@ span{
 }
   @media only screen and (max-width: 479px) {
     .info{
-   background-color:#657b85;
-  height: 1200px;
   padding-top: 40px;
   }
 

@@ -321,6 +321,14 @@ header h1 {
     font-size: 0.875rem;
   }
 }
+@media only screen and (max-width: 479px) {
+    .cd-timeline-img img {
+ 
+  width: 0px;
+  height: 0px;
+  
+}
+}
 @media only screen and (min-width: 1170px) {
   
   .cd-timeline-img img {
