@@ -4,6 +4,50 @@ body {
 
 
 }
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .ind{
+  text-align: left;
+  padding-left: 70px;
+  list-style: circle;
+}
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .ind{
+  text-align: left;
+  padding-left: 100px;
+  list-style: circle;
+}
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .ind{
+  text-align: left;
+  padding-left: 250px;
+  list-style: circle;
+}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .ind{
+  text-align: left;
+  padding-left: 330px;
+  list-style: circle;
+}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .ind{
+  text-align: left;
+  padding-left: 330px;
+  list-style: circle;
+}
+}
 
 .part1{
   background-color:#657b85;
@@ -16,10 +60,18 @@ body {
   text-decoration: none;
   font-family: sans-serif;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 165px;
 
 }
 .part1 h4 {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -25px;
+
+}
+.part1 h6 {
   color: white;
   text-decoration: none;
   font-family: sans-serif;
@@ -92,6 +144,14 @@ body {
   
 
 }
+.vision h6{
+
+padding-right: 15px; 
+padding-left:15px;
+}
+.vision h3{
+text-align: center;
+}
 }
 @media only screen and (max-width: 479px) {
 .vision{
@@ -102,6 +162,14 @@ body {
        height: 100%;
   
 
+}
+.vision h6{
+
+padding-right: 15px; 
+padding-left:15px;
+}
+.vision h3{
+text-align: center;
 }
 
 }
@@ -169,6 +237,14 @@ body {
   
 
 }
+.emmanuel h5{
+
+padding-right: 15px; 
+padding-left:15px;
+}
+.emmanuel h3{
+text-align: center;
+}
 }
 @media only screen and (max-width: 479px) {
 .emmanuel{
@@ -176,6 +252,14 @@ body {
   height: 100%;
   
 
+}
+.emmanuel h5{
+
+padding-right: 15px; 
+padding-left:15px;
+}
+.emmanuel h3{
+text-align: center;
 }
 
 }
